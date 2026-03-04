@@ -1,0 +1,437 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <!--
+Program name: homework1.html
+Author: Sameeha Thanwey
+Date created: 02/20/2026
+Date last edited: 02/27/2026
+Version: 1.0
+Description: EverCare Medical Patient Registration
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>EverCare Medical - Patient Registration</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+<div id="header">
+    <table width="100%">
+        <tr>
+            <td>
+                <img id="logo" 
+                src="logo.png" 
+                alt="EverCare Medical Logo">
+            </td>
+            <td valign="top">
+                <h1 id="company">EverCare Medical</h1>
+            </td>
+            <td valign="bottom" align="right">
+                Today's date: <span id="today">Date goes here</span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<hr>
+
+<div id="body">
+    <form action="thankyou.html">
+        <table class="form">
+            <tr class="form">
+                <th class="form" colspan="3">Patient Registration Form</th>
+            </tr>
+                <!-- Patient Name Section Goes Here -->
+            <tr class="form">
+                <td align="Left">
+                    <label for="firstname">First Name</label>
+                        <input type="text"
+                           size="20"
+                           maxlength="30"
+                           id="firstname"
+                           name="firstname"
+                           required
+                           oninvalid="this.setCustomValidity('First Name is Required')"
+                           oninput="this.setCustomValidity('')"
+                           placeholder="required"
+                    > 
+                    <label for="middleinitial">Middle Initial</label>
+                        <input type="text"
+                           size="1"
+                           maxlength="1"
+                           id="middleinitial"
+                           name="middleinitial"
+                           placeholder="A"
+                        >
+                    <label for="lastname">Last Name</label>
+                        <input type="text"
+                           size="20"
+                           maxlength="30"
+                           id="lastname"
+                           name="lastname"
+                           required
+                           oninvalid="this.setCustomValidity('Last Name is Required')"
+                           oninput="this.setCustomValidity('')"
+                           placeholder="required"
+                        >   
+                </td>
+            </tr>     
+        <!-- Date of birth and Social Security section goes here-->
+        <tr class="form">
+            <td align="Left">
+                <label for="dob">Date of Birth</label>
+                <input type="text"
+                       size="14" 
+                       maxlength="8"
+                       id="dob"
+                       name="dob"
+                       required 
+                       oninvalid="this.setCustomValidity('Date of Birth is Required')"
+                       oninput="this.setCustomValidity('')"
+                       placeholder="MM/DD/YYYY"
+                >      
+                <label for="socialsecurity">Social Security Number</label>
+                <input type="password"
+                       size="14"
+                       maxlength="9"
+                       id="social"
+                       name="social"
+                       required
+                       oninvalid="this.setCustomValidity('Social Security is Required')"
+                       oninput="this.setCustomValidity('')"
+                       placeholder="XXX-XX-XXXX"
+                >  
+            </td>
+        </tr>
+            <!-- Address Section Goes Here -->
+        <tr class="form">
+            <td align="left">
+                <label for="addr1">Address Line 1</label>
+                <input type="text"
+                       size="40"
+                       minlength="4"
+                       maxlength="30"
+                       id="addr1"
+                       name="addr1"
+                       required
+                       oninvalid="this.setCustomValidity('At Least 1 Address Line Required')"
+                       oninput="this.setCustomValidity('')"
+                       placeholder="Street Address, P.O. Box, Company Name"
+                >   
+            </td>
+        </tr>          
+        <tr class="form">
+            <td align="left">
+                <label for="addr2">Address Line 2</label>
+                <input type="text"
+                       size="40"
+                       maxlength="30"
+                       id="addr2"
+                       name="addr2"
+                       placeholder="Apartment, Suite, Unit, Building, Floor, etc"
+                >  
+            </td>
+        </tr>            
+        <!-- City, State, and Zip Code Section goes here-->
+
+        <tr class="form">
+            <td align="left">
+                <label for="city">City</label>
+                <input type="text"
+                       size="15"
+                       maxlength="25"
+                       id="city"
+                       name="city"
+                       required
+                       oninvalid="this.setCustomValidity('City is Required')"
+                       oninput="this.setCustomValidity"
+                       plaeholder="required" 
+                >
+                <label for="state">State</label>
+                <select id="state" name="state" required>
+                    <option value=""></option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                    <option value="PR">Puerto Rico</option>     
+                </select>
+
+                <label for="zip">Zip</label>
+                <input type="text"
+                       size="5"
+                       pattern="[0-9]{5}" 
+                       maxlength="5"
+                       id="zip"
+                       name="zip"
+                       required
+                       oninvalid="this.setCustomValidity('Zip Code Required')"
+                       oninput="this.setCustomValidity('')"
+                       placeholder="00000"
+                >
+            </td>
+        </tr>             
+
+                <!-- Email and Phone number section -->
+
+        <tr class="form">
+            <td align="left">
+                <label for="email">Email</label>
+                <input type="email"
+                       size="25"
+                       maxlength="50"
+                       id="email"
+                       name="email"
+                       required
+                       oninvalid="this.setCustomValidity('Valid Email Address Required')"
+                       oninput="this.setCustomValidity('')"
+                       placeholder="name@domain.tld"
+                >
+
+                <label for="phone">Phone #</label>
+                <input type="text"
+                       size="13"
+                       maxlength="13"  
+                       id="phone"
+                       name="phone"
+                       placeholder="(713)555-1212"
+                >
+            </td>
+        </tr>
+
+        <!-- Symptoms Section Goes Here -->
+
+        <tr class="form">
+            <td align="left">
+                <label for="symptoms">Describe Current Symptoms</label><br>
+                <textarea id="symptoms"
+                           name="symptoms"
+                           rows="3"
+                           cols="50"
+                           placeholder="Describe your symptoms here..."></textarea>
+            </td>
+        </tr>
+
+        <!-- Check Box Here -->
+
+        <tr class="form">
+            <td align="left">
+                <label>Check all that apply:</label>
+
+                <label><input type="checkbox" name="history" value="asthma"> Asthma</label>
+                <label><input type="checkbox" name="history" value="diabetes"> Diabetes</label>
+                <label><input type="checkbox" name="history" value="hypertension"> Hypertension</label>
+                <label><input type="checkbox" name="history" value="covid19"> Covid 19</label>
+                <label><input type="checkbox" name="history" value="allergies"> Allergies</label>
+            </td>
+        </tr>
+
+        <!-- Radio Boxes go here -->
+
+        <tr class="form">
+            <td align="left">
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="M" required>Male</label>
+                <label><input type="radio" name="gender" value="F">Female</label>
+                <label><input type="radio" name="gender" value="O">Other</label>
+            </td>
+        </tr>
+
+        <tr class="form">
+            <td align="left">
+                <label>Vaccinated?</label>
+                <label><input type="radio" name="vaccinated" value="Y" required>Yes</label>
+                <label><input type="radio" name="vaccinated" value="N">No</label>
+            </td>
+        </tr>
+
+        <tr class="form">
+            <td align="left">
+                <label>Do you have insurance?</label>
+                <label><input type="radio" name="insurance" value="Y" required>Yes</label>
+                <label><input type="radio" name="insurance" value="N">No</label>
+            </td>
+        </tr>
+
+        <tr class="form">
+            <td align="left">
+                <label>Have you had surgery in the past 6 months?</label>
+                <label><input type="radio" name="surgery" value="Y" required>Yes</label>
+                <label><input type="radio" name="surgery" value="N">No</label>
+            </td>
+        </tr>
+
+        <!-- Slide Bar goes here -->
+
+        <tr class="form">
+            <td align="left">
+                <label for="healthscale">Health Rating:</label>
+                1
+                <input type="range"
+                       class="slider"
+                       id="healthscale"
+                       name="healthscale"
+                       min="1"
+                       max="10"
+                       step="1"
+                       value="5"
+                >
+                10
+                Your Current Rating: <span id="rangedisplay"></span>
+
+            </td>
+        </tr>
+
+        <!-- User ID and Password -->
+
+        <tr class="form">
+            <td align="left">
+                <label for="userid">User ID</label>
+                <input type="text"
+                       size="20"
+                       maxlength="20"
+                       id="userid"
+                       name="userid"
+                       required
+                       oninvalid="this.setCustomValidity('User ID is required')"
+                       oninput="this.set.CustomValidity('')"
+                       placeholder="Create a User ID"
+                >
+        <tr class="form">
+            <td align="left">        
+
+                <label for="password">Create Password</label>
+                <input type="password"
+                        size="20"
+                        maxlength="20"
+                        id="password"
+                        name="password"
+                        required 
+                        oninvalid="this.setCustomValidity('Password Required')"
+                        oninput="this.setCustomValidity"
+                        placeholder="Enter Password"
+                >
+            </td>
+        </tr>        
+            </td>
+        </tr>
+
+        <tr class="form">
+            <td align="left">
+
+                    <label for="reenter">Re-Enter Password</label>
+                    <input type="password"
+                           size="20"
+                           maxlength="20"
+                           id="reenter"
+                           name="reenter"
+                           required
+                           oninvalid="this.setCustomValidity('Please re-enter your password')"
+                           oninput="this.setCustomValidity('')"
+                           placeholder="Re-enter Password"
+                    > 
+            </td>
+        </tr>
+
+        <tr class="form">
+            <td colspan="3" align="center">
+
+                <input type="submit" value="Submit">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <input type="reset" value="Clear and Start Over">
+
+            </td>
+        </tr>
+
+        </table>
+    </form>
+</div>
+
+<div id="footer">
+    <hr>
+    <table width="100%">
+        <tr>
+            <td>
+                Contact Us<br>
+                <a href="tel:7132818322">713-281-8322</a><br>
+                <a href="mailto:evercaremedical@outlook.com">evercaremedical@outlook.com</a><br>
+                <br>
+                EverCare Medical<br>
+                PO Box 18881<br>
+                Houston, TX 77077
+            </td>
+        </tr>
+    </table>  
+</div>
+
+<!-- JavaScript for Date Goes Here -->
+
+<script>
+    document.getElementById("today").innerHTML = new Date().toLocaleDateString();
+</script>
+
+<!-- JavaScript for Range Slider Goes Here -->
+<script>
+    var slider = document.getElementById("healthscale");
+    var output = document.getElementById("rangedisplay");
+
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
+
+</body>
+</html>
