@@ -1,0 +1,32 @@
+/* 
+ Name: Sameeha Thanwey
+ File: stylesheet.css
+ Date Created: 03/09/2026
+ Date Updated: 03/27/2026
+ Purpose: Style sheet for MIS 3371 HW1
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
+/* background color*/
+body
+{
+    background-color: #d9ead3ff;
+    font-family: 'Roboto', sans-serif;
+    color: #0563a4;
+}
+ 
+/*Title font and color*/
+
+h1
+{
+   font-size: xxx-large;
+   font-family: 'Monsterrat', sans-serif;
+   color: #0563a4;
+}
+
+/* adjust logo size*/ 
+#logo 
+ {
+    width: 350px;     
+    height: auto;    
+}
