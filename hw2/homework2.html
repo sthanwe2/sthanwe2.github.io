@@ -38,7 +38,7 @@ Description: EverCare Medical Patient Registration
 <hr>
 
 <div id="body">
-    <form action="thankyou.html">
+    <form action="thankyou.html" id="registrationForm">
         <table class="form">
             <tr class="form">
                 <th class="form" colspan="3">Patient Registration Form</th>
@@ -53,6 +53,8 @@ Description: EverCare Medical Patient Registration
                            id="firstname"
                            name="firstname"
                            required
+                           title= "Enter 1 to 30 characters. Letters, apostrophes, and dashes only."
+                           pattern= "[A-Za-z'-]{1,30}"
                            oninvalid="this.setCustomValidity('First Name is Required')"
                            oninput="this.setCustomValidity('')"
                            placeholder="required"
@@ -63,6 +65,8 @@ Description: EverCare Medical Patient Registration
                            maxlength="1"
                            id="middleinitial"
                            name="middleinitial"
+                           title="Enter one letter only, or leave blank."
+                           pattern="[A-Z^a-z ]{0,}"
                            placeholder="A"
                         >
                     <label for="lastname">Last Name</label>
@@ -72,6 +76,8 @@ Description: EverCare Medical Patient Registration
                            id="lastname"
                            name="lastname"
                            required
+                           title="Enter 1 to 30 characters. Letters, apostrophes, and dashes only."
+                           pattern="[A-Za-z'-]{1,30}"
                            oninvalid="this.setCustomValidity('Last Name is Required')"
                            oninput="this.setCustomValidity('')"
                            placeholder="required"
@@ -84,7 +90,7 @@ Description: EverCare Medical Patient Registration
                 <label for="dob">Date of Birth</label>
                 <input type="text"
                        size="14" 
-                       maxlength="8"
+                       maxlength="10"
                        id="dob"
                        name="dob"
                        required 
@@ -95,7 +101,7 @@ Description: EverCare Medical Patient Registration
                 <label for="socialsecurity">Social Security Number</label>
                 <input type="password"
                        size="14"
-                       maxlength="9"
+                       maxlength="11"
                        id="social"
                        name="social"
                        required
@@ -146,8 +152,8 @@ Description: EverCare Medical Patient Registration
                        name="city"
                        required
                        oninvalid="this.setCustomValidity('City is Required')"
-                       oninput="this.setCustomValidity"
-                       plaeholder="required" 
+                       oninput="this.setCustomValidity('')"
+                       placeholder="required" 
                 >
                 <label for="state">State</label>
                 <select id="state" name="state" required>
@@ -346,6 +352,8 @@ Description: EverCare Medical Patient Registration
                        oninput="this.set.CustomValidity('')"
                        placeholder="Create a User ID"
                 >
+            </td>
+        </tr>
         <tr class="form">
             <td align="left">        
 
@@ -357,13 +365,11 @@ Description: EverCare Medical Patient Registration
                         name="password"
                         required 
                         oninvalid="this.setCustomValidity('Password Required')"
-                        oninput="this.setCustomValidity"
+                        oninput="this.setCustomValidity('')"
                         placeholder="Enter Password"
                 >
             </td>
         </tr>        
-            </td>
-        </tr>
 
         <tr class="form">
             <td align="left">
