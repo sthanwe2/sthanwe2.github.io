@@ -55,10 +55,13 @@ Description: EverCare Medical Patient Registration
                            required
                            title= "Enter 1 to 30 characters. Letters, apostrophes, and dashes only."
                            pattern= "[A-Za-z'-]{1,30}"
+                           onblur= "validateFname()"
                            oninvalid="this.setCustomValidity('First Name is Required')"
                            oninput="this.setCustomValidity('')"
                            placeholder="required"
                     > 
+                    <span class="error" id="fname-error"></span>
+                 
                     <label for="middleinitial">Middle Initial</label>
                         <input type="text"
                            size="1"
@@ -66,9 +69,12 @@ Description: EverCare Medical Patient Registration
                            id="middleinitial"
                            name="middleinitial"
                            title="Enter one letter only, or leave blank."
-                           pattern="[a-zA-Z']{0,1}"
+                           pattern="[A-Za-z]?"
+                           onblur="validateMid()"
                            placeholder="A"
                         >
+                        <span class="error" id="mid-error"></span>
+                 
                     <label for="lastname">Last Name</label>
                         <input type="text"
                            size="20"
@@ -77,42 +83,47 @@ Description: EverCare Medical Patient Registration
                            name="lastname"
                            required
                            title="Enter 1 to 30 characters. Letters, apostrophes, and dashes only."
-                           pattern="[A-Za-z'-]{1,30}"
+                           pattern="[A-Za-z'2-5-]{1,30}"
+                           onblur = "validateLname()"
                            oninvalid="this.setCustomValidity('Last Name is Required')"
                            oninput="this.setCustomValidity('')"
                            placeholder="required"
-                        >   
+                        > 
+                        <span class="error" id="lname-error"></span>
                 </td>
             </tr>     
         <!-- Date of birth and Social Security section goes here-->
         <tr class="form">
             <td align="Left">
                 <label for="dob">Date of Birth</label>
-                <input type="text"
-                       size="14" 
-                       maxlength="10"
+                <input type="date"
                        id="dob"
                        name="dob"
                        required 
-                       title="Enter your date of birth."
+                       title="Enter your date of birth in MM/DD/YYYY format."
                        onblur="validateDob()"
                        oninvalid="this.setCustomValidity('Date of Birth is Required')"
                        oninput="this.setCustomValidity('')"
-                       placeholder="MM/DD/YYYY"
-                >      
+                >
+                <span class="error" id="dob-error"></span>
+             
                 <label for="socialsecurity">Social Security Number</label>
                 <input type="password"
                        size="14"
-                       maxlength="9"
-                       id="social"
-                       name="social"
+                       minlength="9"
+                       maxlength="11"
+                       id="ssn"
+                       name="ssn"
                        required
-                       title="Enter your SSN without special characters"
+                       title="Enter your SSN. Dashes are optional."
+                       pattern="[0-9]{9}|[0-9]{3}-[0-9]{2}-[0-9]{4}"
                        onblur="validateSsn()"
                        oninvalid="this.setCustomValidity('Social Security is Required')"
                        oninput="this.setCustomValidity('')"
                        placeholder="XXX-XX-XXXX"
                 >  
+                <span class="error" id="ssn-error"></span>
+             
             </td>
         </tr>
             <!-- Address Section Goes Here -->
