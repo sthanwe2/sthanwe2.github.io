@@ -22,7 +22,7 @@ function reviewInput() {
     let phone = document.getElementById("phone").value;
     let symptoms = document.getElementById("symptoms").value;
     let userid = document.getElementById("userid").value;
-    let healthscale = document.getElementById("healthscale").value:
+    let healthscale = document.getElementById("healthscale").value;
 
     let gender = document.querySelector('input[name="gender"]:checked');
     let vaccinated = document.querySelector('input[name="vaccinated"]:checked');
@@ -37,7 +37,7 @@ function reviewInput() {
     }
 
     let reviewText = 
-      "Name: " + fname + " " + mid " " + lname + "<br>" + 
+      "Name: " + fname + " " + mid +  " " + lname + "<br>" + 
       "Date of Birth: " + dob + "<br>" +
       "Social Security Number: " + ssn + "<br><br>" +
 
@@ -54,7 +54,7 @@ function reviewInput() {
       "Gender: " + (gender ? gender.value : "") + "<br>" + 
       "Vaccinated: " + (vaccinated ? vaccinated.value : "") + "<br>" + 
       "Insurance: " + (insurance ? insurance.value : "") + "<br>" +
-      "Recent Surgery: " + (surgery ? surger.value : "") + "<br>" +
+      "Recent Surgery: " + (surgery ? surgery.value : "") + "<br>" +
       "Health Rating: " + healthscale + "<br><br>" +
 
       "Symptoms: " + symptoms + "<br><br>" + 
