@@ -42,3 +42,8 @@ span.error
 {
   color: red !important;
 }
+
+#submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
