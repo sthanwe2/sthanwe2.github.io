@@ -273,13 +273,20 @@ function validateAddr1() {
 function validateAddr2() {
     let addr2 = document.getElementById("addr2");
 
-    if (addr2.value.length > 30) {
-      document.getElementById("addr2-error").innerHTML = 
-        "Address Line 2 must be less than 30 characters.";
-      return false;
+    if (addr2.value.trim() == "") {
+     document.getElementById("addr2-error").innerHTML = "";
+     return true;
+    } else if (addr2.value.length > 30) {
+     document.getElementById("addr2-error").innerHTML = 
+      "Address Line 2 must be less than 30 characters.";
+     return false;
+    } else if (addr2.value.length < 2) {
+     document.getElementById("addr2-error").innerHTML = 
+      "Address Line 2 must be at least 2 characters if used.";
+     return false;
     } else {
-      document.getElementById("addr2-error").innerHTML = "";
-      return true;
+     document.getElementById("addr2-error").innerHTML = "";
+     return true;
     }
 }
 
