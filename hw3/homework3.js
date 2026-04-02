@@ -214,6 +214,14 @@ function formatSsn() {
   ssn = snn.slice(0,3) + "-" + ssn.slice(3);
  }
  ssnField.value = ssn; 
+
+ function showSsn() {
+    document.getElementById("ssn").type = "text";
+ }
+
+ function hideSsn() {
+    document.getElementById("ssn").type = "password";
+ }
   
 
 function validateUserid() {
