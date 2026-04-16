@@ -288,7 +288,7 @@ Description: EverCare Medical Patient Registration
                        title="Enter your phone number in the format 000-000-0000"
                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                        oninvalid="this.setCustomValidity('Enter phone number as 000-000-0000')"
-                       oninput="this.setCustomValidity(''); validatePhone()"
+                       oninput="this.setCustomValidity(''); formatPhone(); validatePhone()"
                        placeholder="713-555-1212"
                        onblur="validatePhone()"
                 >
