@@ -7,16 +7,6 @@
  */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap');
 
-/* This section is the make the Header in view at all times*/
-
-#header {
-    position: sticky;
-    top: 0;
-    background-color: #d9ead3;
-    z-index: 9999;
-    border-bottom: 2px solid #0563a4;
-}
-
 /* background color*/
 body
 {
@@ -57,4 +47,18 @@ span.error
 #submit:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d9ead3;
+    z-index: 9999;
+    border-bottom: 2px solid #0563a4;
+}
+
+#body {
+    margin-top: 170px;
 }
