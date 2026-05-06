@@ -45,12 +45,13 @@ span.error
 }
 
 /* trying to make the header sticky*/
+
 #header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 130px;
+    height: 125px;
     background-color: #d9ead3;
     z-index: 9999;
     border-bottom: 2px solid #0563a4;
@@ -59,26 +60,26 @@ span.error
 }
 
 #header table {
-    height: 130px;
+    height: 125px;
     border-spacing: 0;
 }
 
 #header td {
     vertical-align: middle;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 #logo {
-    width: 200px;
+    width: 180px;
     height: auto;
 }
 
 #company {
     margin: 0;
     padding: 0;
-    font-size: 40px;
+    font-size: 38px;
 }
 
 #body {
-    margin-top: 125px;
+    margin-top: 135px;
 }
