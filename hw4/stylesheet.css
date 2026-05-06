@@ -60,7 +60,7 @@ span.error
 }
 
 #header table {
-    height: 125px;
+    height: 160px;
     border-spacing: 0;
 }
 
@@ -81,7 +81,7 @@ span.error
 }
 
 #body {
-    margin-top: 135px;
+    margin-top: 170px;
 }
 
 /*Attempt to remove extra space in iFrame*/
