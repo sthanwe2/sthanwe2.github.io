@@ -1,6 +1,6 @@
 /* 
  Name: Sameeha Thanwey
- File: homework3.js
+ File: homework4.js
  Date Created: 05/06/2026
  Date Updated: 04/08/2026
  Purpose: Redisplay/validate data from a form
