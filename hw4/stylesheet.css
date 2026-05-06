@@ -26,11 +26,6 @@ h1
 }
 
 /* adjust logo size*/ 
-#logo 
-{
-    width: 350px;     
-    height: auto;    
-}
 
 #reviewArea 
 {
@@ -74,7 +69,7 @@ span.error
 }
 
 #logo {
-    width: 100px;
+    width: 350px;
     height: auto;
 }
 
