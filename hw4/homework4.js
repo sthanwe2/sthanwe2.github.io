@@ -393,4 +393,19 @@ function formatPhone() {
   phoneField.value = phone;
 }
 
+// Fetch API States
+function loadStates() {
+ fetch("states.html") 
+  .then(function(response) {
+   return response.text();
+  })
+ .then(function(data) {
+  document.getElementById("state").innerHTML = data;
+ })
+ .catch(function(error) {
+  console.log("Error loading states:", error);
+  document.getElementById("state").innerHTML = '<option value="">Unable to load states</option>';
+ });
+}
+
    
