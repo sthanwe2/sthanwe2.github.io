@@ -10,14 +10,11 @@
 /* This section is the make the Header in view at all times*/
 
 #header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
     background-color: #d9ead3;
+    z-index: 9999;
     border-bottom: 2px solid #0563a4;
-    z-index: 1000;
-    padding: 10px;
 }
 
 /* background color*/
@@ -26,7 +23,7 @@ body
     background-color: #d9ead3ff;
     font-family: 'Roboto', sans-serif;
     color: #0563a4;
-    padding-top: 170px;
+    margin-top: 170px;
 }
  
 /*Title font and color*/
