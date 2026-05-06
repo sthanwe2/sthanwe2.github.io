@@ -27,6 +27,10 @@ Description: EverCare Medical Patient Registration
             <td valign="middle">
                 <h1 id="company">EverCare Medical</h1>
                 <p id="welcome"></p> 
+                <p id="newUserMessage" style="display:none;">
+                       <input type="checkbox" id="newUser" onclick="resetUser()">
+                       <span id="newUserText"></span>
+               </p>
             </td>
             <td valign="bottom" align="right">
                 Today's date: <span id="today">Date goes here</span>
@@ -36,12 +40,14 @@ Description: EverCare Medical Patient Registration
 </div>
 
 <div id="body">
- <hr>
+
     <form action="thankyou.html" id="registrationForm">
         <table class="form">
             <tr class="form">
                 <th class="form" colspan="3">Patient Registration Form</th>
             </tr>
+
+<hr>
                 <!-- Patient Name Section Goes Here -->
             <tr class="form">
                 <td align="Left">
