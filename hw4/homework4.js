@@ -446,19 +446,37 @@ function getCookie(name) {
     return "";
 }
 
+//User should be able to reset user
 function welcomeUser() {
-
     let firstname = getCookie("firstname");
 
     if (firstname != "") {
-
         document.getElementById("welcome").innerHTML =
             "Welcome back, " + firstname + "!";
 
-    } else {
+        document.getElementById("newUserMessage").style.display = "block";
+        document.getElementById("newUserText").innerHTML =
+            "Not " + firstname + "? Click here to start as a new user.";
 
+        document.getElementById("firstname").value = firstname;
+
+    } else {
         document.getElementById("welcome").innerHTML =
             "Welcome New User";
+
+        document.getElementById("newUserMessage").style.display = "none";
     }
+}
+
+function resetUser() {
+    document.cookie = "firstname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    localStorage.clear();
+
+    document.getElementById("registrationForm").reset();
+    document.getElementById("welcome").innerHTML = "Welcome New User";
+    document.getElementById("newUserMessage").style.display = "none";
+    document.getElementById("submit").disabled = true;
+
+    alert("User has been cleared. You may start as a new user.");
 }
    
