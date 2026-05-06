@@ -49,6 +49,7 @@ span.error
   cursor: not-allowed;
 }
 
+/* trying to make the header sticky*/
 #header {
     position: fixed;
     top: 0;
