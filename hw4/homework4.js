@@ -29,6 +29,45 @@ function validateForm() {
     document.getElementById("firstname").value;
 
     setCookie("firstname", firstname);
+
+  if (document.getElementById("rememberMe").checked) {
+
+    localStorage.setItem(
+        "firstname",
+        document.getElementById("firstname").value
+    );
+
+    localStorage.setItem(
+        "lastname",
+        document.getElementById("lastname").value
+    );
+
+    localStorage.setItem(
+        "email",
+        document.getElementById("email").value
+    );
+
+    localStorage.setItem(
+        "phone",
+        document.getElementById("phone").value
+    );
+
+    localStorage.setItem(
+        "city",
+        document.getElementById("city").value
+    );
+
+    localStorage.setItem(
+        "zip",
+        document.getElementById("zip").value
+    );
+
+    localStorage.setItem(
+        "state",
+        document.getElementById("state").value
+    );
+
+}
   
   document.getElementById("submit").disabled = false;
  } else { 
@@ -478,5 +517,52 @@ function resetUser() {
     document.getElementById("submit").disabled = true;
 
     alert("User has been cleared. You may start as a new user.");
+}
+
+//Remember me section
+
+function loadUserData() {
+
+    if (localStorage.getItem("firstname")) {
+
+        document.getElementById("firstname").value =
+            localStorage.getItem("firstname");
+    }
+
+    if (localStorage.getItem("lastname")) {
+
+        document.getElementById("lastname").value =
+            localStorage.getItem("lastname");
+    }
+
+    if (localStorage.getItem("email")) {
+
+        document.getElementById("email").value =
+            localStorage.getItem("email");
+    }
+
+    if (localStorage.getItem("phone")) {
+
+        document.getElementById("phone").value =
+            localStorage.getItem("phone");
+    }
+
+    if (localStorage.getItem("city")) {
+
+        document.getElementById("city").value =
+            localStorage.getItem("city");
+    }
+
+    if (localStorage.getItem("zip")) {
+
+        document.getElementById("zip").value =
+            localStorage.getItem("zip");
+    }
+
+    if (localStorage.getItem("state")) {
+
+        document.getElementById("state").value =
+            localStorage.getItem("state");
+    }
 }
    
