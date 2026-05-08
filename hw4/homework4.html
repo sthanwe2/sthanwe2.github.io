@@ -66,7 +66,7 @@ Description: EverCare Medical Patient Registration
                            pattern= "[A-Za-z'-]{1,30}"
                            onblur= "validateFname()"
                            oninvalid="this.setCustomValidity('First Name is Required')"
-                           oninput="this.setCustomValidity(''); "validateFname()"; 
+                           oninput="this.setCustomValidity(''); validateFname(); updateProgressBar()"
                            placeholder="required"
                     > 
                     <span class="error" id="fname-error"></span>
@@ -96,7 +96,7 @@ Description: EverCare Medical Patient Registration
                            pattern="[A-Za-z'-]{1,30}"
                            onblur = "validateLname()"
                            oninvalid="this.setCustomValidity('Last Name is Required')"
-                           oninput="this.setCustomValidity(''); validateLname()"
+                           oninput="this.setCustomValidity(''); validateLname(); updateProgressBar()"
                            placeholder="required"
                         > 
                         <span class="error" id="lname-error"></span>
@@ -113,7 +113,7 @@ Description: EverCare Medical Patient Registration
                        title="Enter your date of birth in MM/DD/YYYY format."
                        onblur="validateDob()"
                        oninvalid="this.setCustomValidity('Date of Birth is Required')"
-                       oninput="this.setCustomValidity(''); validateDob()"
+                       oninput="this.setCustomValidity(''); validateDob(); updateProgressBar()"
                 >
                 <span class="error" id="dob-error"></span>
              
@@ -130,7 +130,7 @@ Description: EverCare Medical Patient Registration
                        onfocus= "showSsn()"
                        onblur= "hideSsn(); validateSsn()"
                        oninvalid="this.setCustomValidity('Social Security is Required')"
-                       oninput="this.setCustomValidity(''); validateSsn(); formatSsn()"
+                       oninput="this.setCustomValidity(''); validateSsn(); formatSsn(); updateProgressBar()"
                        placeholder="XXX-XX-XXXX"
                 >  
                 <span class="error" id="ssn-error"></span>
@@ -150,7 +150,7 @@ Description: EverCare Medical Patient Registration
                        required
                        title="Please enter your address."
                        oninvalid="this.setCustomValidity('At Least 1 Address Line Required')"
-                       oninput="this.setCustomValidity(''); validateAddr1()"
+                       oninput="this.setCustomValidity(''); validateAddr1(); updateProgressBar()"
                        placeholder="Street Address, P.O. Box, Company Name"
                        onblur="validateAddr1()"
                 >
@@ -187,7 +187,7 @@ Description: EverCare Medical Patient Registration
                        required
                        title= "Enter your city."
                        oninvalid="this.setCustomValidity('City is Required')"
-                       oninput="this.setCustomValidity(''); validateCity()"
+                       oninput="this.setCustomValidity(''); validateCity(); updateProgressBar()"
                        placeholder="required"
                        onblur= "validateCity()"
                 >
@@ -209,7 +209,7 @@ Description: EverCare Medical Patient Registration
                        title="Enter your 5 digit zip code or Zip + 4."
                        pattern="[0-9]{5}(-[0-9]{4})?"
                        oninvalid="this.setCustomValidity('Zip Code Required')"
-                       oninput="this.setCustomValidity(''); validateZip()"
+                       oninput="this.setCustomValidity(''); validateZip(); updateProgressBar()"
                        placeholder="00000"
                        onblur="validateZip()"
                 >
@@ -231,7 +231,7 @@ Description: EverCare Medical Patient Registration
                        title="Enter a valid email."
                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
                        oninvalid="this.setCustomValidity('Valid Email Address Required')"
-                       oninput="this.setCustomValidity(''); validateEmail()"
+                       oninput="this.setCustomValidity(''); validateEmail(); updateProgressBar()"
                        placeholder="name@domain.tld"
                        onblur= "validateEmail()"
                 >
@@ -247,7 +247,7 @@ Description: EverCare Medical Patient Registration
                        title="Enter your phone number in the format 000-000-0000"
                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                        oninvalid="this.setCustomValidity('Enter phone number as 000-000-0000')"
-                       oninput="this.setCustomValidity(''); formatPhone(); validatePhone()"
+                       oninput="this.setCustomValidity(''); formatPhone(); validatePhone(); updateProgressBar()"
                        placeholder="713-555-1212"
                        onblur="validatePhone()"
                 >
@@ -368,7 +368,7 @@ Description: EverCare Medical Patient Registration
                        title="Create your User ID. Letters, numbers, underscore, and dash only. No spaces."
                        pattern="[A-Za-z][A-Za-z0-9_-]{4,19}"
                        oninvalid="this.setCustomValidity('User ID must start with a letter and be 5–30 valid characters (letters, numbers, _ or -)')"
-                       oninput="this.setCustomValidity(''); validateUserid()"
+                       oninput="this.setCustomValidity(''); validateUserid(); updateProgressBar()"
                        placeholder="Create a User ID"
                        onblur="validateUserid()"
                 >
@@ -389,7 +389,7 @@ Description: EverCare Medical Patient Registration
                         title="8–30 characters, include 1 uppercase, 1 lowercase, 1 number, and 1 special character (no quotes)"
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#%^&*()\-_=+\[\]{};:,.<>/?`~]).{8,30}$"
                         oninvalid="this.setCustomValidity('Password Required')"
-                        oninput="this.setCustomValidity(''); validatePassword()"
+                        oninput="this.setCustomValidity(''); validatePassword(); updateProgressBar()"
                         placeholder="Enter Password"
                         onblur="validatePassword()"
                         onfocus="validatePassword()"
@@ -411,7 +411,7 @@ Description: EverCare Medical Patient Registration
                            required
                            title="Re-enter your password to confirm it matches."
                            oninvalid="this.setCustomValidity('Please re-enter your password')"
-                           oninput="this.setCustomValidity(''); confirmPassword()"
+                           oninput="this.setCustomValidity(''); confirmPassword(); updateProgressBar()"
                            placeholder="Re-enter Password"
                            onblur="confirmPassword()"
                            onfocus="confirmPassword()"
