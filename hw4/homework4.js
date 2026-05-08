@@ -570,7 +570,7 @@ function loadUserData() {
 
 function updateProgressBar() {
 
-    let totalFields = 10;
+    let totalFields = 11;
     let completedFields = 0;
 
     if (document.getElementById("firstname").value != "")
