@@ -594,6 +594,9 @@ function updateProgressBar() {
     if (document.getElementById("city").value != "")
         completedFields++;
 
+    if (document.getElementById("addr1").value != "")
+        completedFields++;
+
     if (document.getElementById("zip").value != "")
         completedFields++;
 
