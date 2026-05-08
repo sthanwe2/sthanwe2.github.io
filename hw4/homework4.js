@@ -636,3 +636,4 @@ if (percent == 100 && confettiPlayed == false) {
 if (percent < 100) {
     confettiPlayed = false;
 }
+}
