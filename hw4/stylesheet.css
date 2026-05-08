@@ -122,3 +122,11 @@ iframe {
     font-weight: bold;
     transition: width 0.3s;
 }
+
+/* Make the text field highlight when user is typing (Add visual enhancements) */
+input:focus,
+textarea:focus,
+select:focus {
+    border: 2px solid #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
