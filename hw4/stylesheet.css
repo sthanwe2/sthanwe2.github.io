@@ -90,7 +90,7 @@ span.error
 }
 
 #body {
-    margin-top: 185px;
+    margin-top: 220px;
 }
 
 /*Attempt to remove extra space in iFrame*/
@@ -98,4 +98,27 @@ iframe {
     display: block;
     margin-top: 0;
     padding-top: 0;
+}
+
+/* Attempt to add a progress bar */
+
+#progressContainer {
+    width: 100%;
+    background-color: #cccccc;
+    height: 25px;
+    position: fixed;
+    top: 175px;
+    left: 0;
+    z-index: 9998;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background-color: #0563a4;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    transition: width 0.3s;
 }
