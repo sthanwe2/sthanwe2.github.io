@@ -616,27 +616,23 @@ function updateProgressBar() {
     if (document.querySelector('input[name="insurance"]:checked')) completedFields++;
     if (document.querySelector('input[name="surgery"]:checked')) completedFields++;
  
-    let percent =
-        (completedFields / totalFields) * 100;
+let percent = (completedFields / totalFields) * 100;
 
-    document.getElementById("progressBar").style.width =
-        percent + "%";
-
-    document.getElementById("progressBar").innerHTML =
-        Math.round(percent) + "%";
-
+document.getElementById("progressBar").style.width = percent + "%";
+document.getElementById("progressBar").innerHTML = Math.round(percent) + "%";
 
 if (percent == 100 && confettiPlayed == false) {
-
-    confetti({
-        particleCount: 150,
-        spread: 90,
-        origin: { y: 0.6 }
-    });
+    if (typeof confetti === "function") {
+        confetti({
+            particleCount: 150,
+            spread: 90,
+            origin: { y: 0.6 }
+        });
+    }
 
     confettiPlayed = true;
 }
 
 if (percent < 100) {
     confettiPlayed = false;
-}   
+}
