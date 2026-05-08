@@ -39,6 +39,10 @@ Description: EverCare Medical Patient Registration
     </table>
 </div>
 
+ <div id="progressContainer">
+    <div id="progressBar">0%</div>
+</div>
+
 <div id="body">
 
     <form action="thankyou.html" id="registrationForm">
@@ -62,7 +66,7 @@ Description: EverCare Medical Patient Registration
                            pattern= "[A-Za-z'-]{1,30}"
                            onblur= "validateFname()"
                            oninvalid="this.setCustomValidity('First Name is Required')"
-                           oninput="this.setCustomValidity(''); "validateFname()"
+                           oninput="this.setCustomValidity(''); "validateFname()"; 
                            placeholder="required"
                     > 
                     <span class="error" id="fname-error"></span>
